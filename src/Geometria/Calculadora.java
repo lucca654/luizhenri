@@ -9,7 +9,7 @@ public class Calculadora {
 		    private int opcao;
 
 		    public void executar() {
-		        Scanner kon = new Scanner(System.in);
+		        Scanner sc = new Scanner(System.in);
 
 		        while (true) {
 		            System.out.println("   JAVA CONSTRUCTIONS INC.");
@@ -20,7 +20,7 @@ public class Calculadora {
 		            System.out.println("4. Sair");
 		            System.out.print("\nDigite sua opção: ");
 
-		            opcao = kon.nextInt();
+		            opcao = sc.nextInt();
 
 		            if (opcao == 4) {
 		                System.out.println("Obrigado por usar o sistema Java Constructions Inc.!");
@@ -31,21 +31,21 @@ public class Calculadora {
 		            switch (opcao) {
 		                case 1:
 		                    System.out.print("Digite o lado do quadrado (em metros): ");
-		                    lado = kon.nextDouble();
+		                    lado = sc.nextDouble();
 		                    System.out.printf("Área do Quadrado = %.2f m²\n", lado * lado);
 		                    break;
 
 		                case 2:
 		                    System.out.print("Digite a base do retângulo (em metros): ");
-		                    base = kon.nextDouble();
+		                    base = sc.nextDouble();
 		                    System.out.print("Digite a altura do retângulo (em metros): ");
-		                    altura = kon.nextDouble();
+		                    altura = sc.nextDouble();
 		                    System.out.printf("Área do Retângulo = %.2f m²\n", base * altura);
 		                    break;
 
 		                case 3:
 		                    System.out.print("Digite o raio do círculo (em metros): ");
-		                    raio = kon.nextDouble();
+		                    raio = sc.nextDouble();
 		                    System.out.printf("Área do Círculo = %.2f m²\n", 3.14159 * raio * raio);
 		                    break;
 
@@ -53,12 +53,12 @@ public class Calculadora {
 		                    System.out.println("Opção inválida! Escolha de 1 a 4.");
 		            }
 
-		            kon.nextLine();
+		        	sc.nextLine();
 		            System.out.println("\nPressione ENTER para continuar...");
-		            kon.nextLine();
+		            sc.nextLine();
 		        }
 
-		        kon.close();
+		    		sc.close();
 		    }
 	}
 
